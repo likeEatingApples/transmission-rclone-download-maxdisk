@@ -24,4 +24,4 @@ jobs:
         run: |
           echo "Free space:"
           df -h 
-          df -h /root/
+          df -h /home/

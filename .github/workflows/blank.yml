@@ -23,4 +23,5 @@ jobs:
       - name: Build
         run: |
           echo "Free space:"
-          df -h
+          df -h 
+          df -h /root/

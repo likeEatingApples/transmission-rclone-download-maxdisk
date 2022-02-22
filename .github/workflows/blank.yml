@@ -1,5 +1,5 @@
 name: My build action requiring more space
-on: push
+on: workflow_dispatch
 
 jobs:
   build:
@@ -10,8 +10,13 @@ jobs:
         uses: easimon/maximize-build-space@master
         with:
           root-reserve-mb: 512
-          swap-size-mb: 1024
+          swap-size-mb: 512
           remove-dotnet: 'true'
+          temp-reserve-mb: 64
+          remove-android: 'true'
+          remove-haskell: 'true'
+          
+          
       - name: Checkout
         uses: actions/checkout@v2
 
